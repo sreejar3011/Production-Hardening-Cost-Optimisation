@@ -6,11 +6,13 @@ This runbook outlines the standard operating procedures, alarm monitoring thresh
 ## 2. Critical CloudWatch Alarms
 * **High CPU Utilization:** Triggered when CPU exceeds 85% for 3 consecutive 5-minute periods. 
   * *Action:* Check ECS/Lambda metrics and review recent deployment logs.
-* **API 5xx Error Rate Spike:** Triggered when HTTP 5xx responses exceed 5% of total traffic over 2 minutes.
-  * *Action:* Inspect API Gateway error logs and downstream database connection pools.
+* **API Gateway 5xx Error Rate Spike (`project2-api-5xx-alarm`):** Triggered when HTTP 5xx errors are greater than 1 over a 5-minute period.
+  * *Action:* Inspect API Gateway error logs, check downstream services, and notify via the `project2-alerts` SNS topic.
+* **Lambda Function Error Spike (`project2-lambda-errors-alarm`):** Triggered when errors for the `update-candidate-status` function are greater than 1 over a 5-minute period.
+  * *Action:* Inspect Lambda execution logs, check error payloads, and notify via the `project2-alerts` SNS topic.
 
 ## 3. Incident Escalation Workflow
-1. **Paging:** Automated alerts fire to the on-call engineer via PagerDuty/SNS.
+1. **Paging:** Automated alerts fire to the on-call engineer via the `project2-alerts` SNS topic.
 2. **Triage:** Acknowledge the alert within 10 minutes and check the CloudWatch dashboard.
 3. **Mitigation:** Execute rollback procedures or scale up compute resources if load-related.
 4. **Post-Mortem:** Document root cause and preventative actions within 24 hours of resolution.
