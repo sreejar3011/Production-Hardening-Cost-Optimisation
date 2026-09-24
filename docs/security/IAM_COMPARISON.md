@@ -239,3 +239,26 @@ The role granted workflow and database permissions via standalone, unscoped stat
     }
   ]
 }
+
+---
+
+## Wildcard (`*`) Resources Compliance Justification
+
+Per security review requirements, remaining wildcard (`*`) resource declarations across the hardened IAM policies were validated against AWS service authorization constraints:
+
+1. **Amazon Textract (`textract:DetectDocumentText`, `textract:AnalyzeDocument`):**
+   - AWS Textract does not support resource-level permissions (ARNs) for document analysis operations.
+   - Setting `"Resource": "*"` is mandatory according to AWS IAM service authorization specifications.
+
+2. **Amazon Comprehend (`comprehend:DetectEntities`, `comprehend:DetectKeyPhrases`):**
+   - Comprehend real-time analysis APIs operate in-memory on incoming payloads and do not support target resource ARNs.
+   - Setting `"Resource": "*"` is required by AWS IAM specifications.
+
+3. **Amazon EventBridge (`events:PutEvents`):**
+   - Used for asynchronous event publication across microservices.
+   - Action scope is strictly limited to event delivery without event bus or rule management permissions.
+
+4. **Applied Scoping Boundaries:**
+   - **DynamoDB:** Restricted by table name patterns (`*resume*`, `*Leave*`, `*LMS*`, `*Employee*`).
+   - **S3:** Scoped to designated project bucket prefixes (`*resume*/*`, `*certificate*/*`).
+   - **Step Functions:** Restricted to state machine execution ARNs (`arn:aws:states:*:367306032058:execution:*`).
