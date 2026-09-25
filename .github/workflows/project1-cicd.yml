@@ -32,6 +32,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ${{ env.PROJECT1_REPO }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: project1
 
       - name: Set up Python
@@ -78,6 +79,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ${{ env.PROJECT1_REPO }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: project1
 
       - name: Set up Python
@@ -115,6 +117,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ${{ env.PROJECT1_REPO }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: project1
 
       - name: Set up Python
