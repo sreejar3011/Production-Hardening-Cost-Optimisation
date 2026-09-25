@@ -1,0 +1,162 @@
+name: Project 1 - CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+env:
+  AWS_REGION: ap-south-1
+  LAMBDA_FUNCTION: f-13-document-validate
+  PROJECT1_REPO: sreejar3011/Employee-Onboarding
+
+jobs:
+
+  build:
+    name: Build Project 1 Lambda
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout CI/CD repository
+        uses: actions/checkout@v4
+
+      - name: Checkout Project 1 source
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.PROJECT1_REPO }}
+          path: project1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        working-directory: project1/backend/document-collection
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Build Lambda package
+        working-directory: project1/backend/document-collection
+        run: |
+          rm -rf lambda-package
+          mkdir -p lambda-package
+
+          cp validate_document/lambda_function.py lambda-package/
+
+          pip install -r requirements.txt -t lambda-package
+
+          cd lambda-package
+          zip -r ../f-13-document-validate.zip .
+
+      - name: Verify deployment package
+        working-directory: project1/backend/document-collection
+        run: |
+          unzip -l f-13-document-validate.zip
+          test -f f-13-document-validate.zip
+
+  test:
+    name: Test Project 1
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Checkout CI/CD repository
+        uses: actions/checkout@v4
+
+      - name: Checkout Project 1 source
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.PROJECT1_REPO }}
+          path: project1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install test dependencies
+        working-directory: project1/backend/document-collection
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Run document validation tests
+        working-directory: project1/backend/document-collection
+        run: |
+          pytest tests/test_validate_document.py -v
+
+  deploy:
+    name: Deploy f-13-document-validate Lambda
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout CI/CD repository
+        uses: actions/checkout@v4
+
+      - name: Checkout Project 1 source
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.PROJECT1_REPO }}
+          path: project1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build deployment package
+        working-directory: project1/backend/document-collection
+        run: |
+          rm -rf lambda-package
+          mkdir -p lambda-package
+
+          cp validate_document/lambda_function.py lambda-package/
+
+          pip install -r requirements.txt -t lambda-package
+
+          cd lambda-package
+          zip -r ../f-13-document-validate.zip .
+
+      - name: Configure AWS credentials with OIDC
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::280710007814:role/GitHubActions-ProdHardngCostOpt-Deploy
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Verify AWS identity
+        run: |
+          aws sts get-caller-identity
+
+      - name: Deploy Lambda
+        working-directory: project1/backend/document-collection
+        run: |
+          aws lambda update-function-code \
+            --function-name ${{ env.LAMBDA_FUNCTION }} \
+            --zip-file fileb://f-13-document-validate.zip \
+            --region ${{ env.AWS_REGION }}
+
+      - name: Verify Lambda deployment
+        run: |
+          aws lambda get-function \
+            --function-name ${{ env.LAMBDA_FUNCTION }} \
+            --region ${{ env.AWS_REGION }} \
+            --query 'Configuration.[FunctionName,Runtime,Handler,LastModified]' \
+            --output table
