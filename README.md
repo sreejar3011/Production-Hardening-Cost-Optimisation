@@ -3,6 +3,12 @@
 Production hardening, observability, security, cost optimisation,
 CI/CD and load testing sprint for four AWS projects.
 
+## CI/CD Status
+
+[![Project 1 CI/CD](https://github.com/sreejar3011/Production-Hardening-Cost-Optimisation/actions/workflows/project1-cicd.yml/badge.svg)](https://github.com/sreejar3011/Production-Hardening-Cost-Optimisation/actions/workflows/project1-cicd.yml)
+
+[![Project 3 CI/CD](https://github.com/sreejar3011/Production-Hardening-Cost-Optimisation/actions/workflows/project3-cicd.yml/badge.svg)](https://github.com/sreejar3011/Production-Hardening-Cost-Optimisation/actions/workflows/project3-cicd.yml)
+
 ## Projects
 
 1. Employee Onboarding
@@ -21,7 +27,7 @@ CI/CD and load testing sprint for four AWS projects.
 
 ## Sprint Tasks
 
-- [ ] Observability
+- [ ] Observabilit
 - [ ] CloudWatch Dashboard
 - [ ] X-Ray
 - [ ] CloudWatch Alarms
