@@ -1,0 +1,24 @@
+# Artillery Load Test Configuration: Project 4 (AI Resume Screener & Talent Pipeline)
+#
+# Status: AVAILABLE & REACHABLE
+# API Gateway ID: zxqd62sqw9 (Region: ap-south-1)
+# Production URL: https://zxqd62sqw9.execute-api.ap-south-1.amazonaws.com/prod
+# Target API URL can be overridden via PROJECT4_API_URL environment variable.
+
+config:
+  target: "{{ $processEnvironment.PROJECT4_API_URL }}"
+  phases:
+    - duration: 60
+      arrivalRate: 50
+      maxVusers: 50
+      name: "Sustained Concurrency Phase (50 concurrent VUs/sec for 60s)"
+  defaults:
+    headers:
+      Accept: "application/json"
+      User-Agent: "Artillery-LoadTest-Sprint6/1.0"
+
+scenarios:
+  - name: "Recruiter Job Listings API (Main Intake)"
+    flow:
+      - get:
+          url: "/Jobs"

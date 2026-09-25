@@ -1,0 +1,28 @@
+# Artillery Load Test Configuration: Project 1 (Employee Onboarding)
+#
+# Status: UNAVAILABLE
+# Note: AWS resources for Project 1 were decommissioned/removed prior to sprint load testing.
+# This configuration is provided for architectural completeness and future redeployment validation.
+#
+# Target API URL must be supplied via the PROJECT1_API_URL environment variable.
+
+config:
+  target: "{{ $processEnvironment.PROJECT1_API_URL }}"
+  phases:
+    - duration: 60
+      arrivalRate: 50
+      name: "Sustained Concurrency Phase (50 concurrent VUs/sec for 60s)"
+  defaults:
+    headers:
+      Content-Type: "application/json"
+      Accept: "application/json"
+
+scenarios:
+  - name: "Employee Onboarding Document Validation API"
+    flow:
+      - post:
+          url: "/documents/validate"
+          json:
+            employee_id: "EMP-TEST-001"
+            document_type: "PASSPORT"
+            document_s3_key: "uploads/test-passport.pdf"
