@@ -1,0 +1,1067 @@
+{
+  "aggregate": {
+    "period": 1790329780000,
+    "counters": {
+      "vusers.created_by_name.Recruiter Job Listings API (Main Intake)": 1745,
+      "vusers.created": 1745,
+      "http.requests": 1745,
+      "vusers.skipped": 1255,
+      "http.codes.401": 1745,
+      "http.responses": 1745,
+      "http.downloaded_bytes": 45370,
+      "plugins.metrics-by-endpoint./prod/Jobs.codes.401": 1745,
+      "vusers.failed": 0,
+      "vusers.completed": 1745
+    },
+    "rates": {
+      "http.request_rate": 36
+    },
+    "firstCounterAt": 1790329726173,
+    "firstHistogramAt": 1790329727772,
+    "lastCounterAt": 1790329787255,
+    "lastHistogramAt": 1790329787255,
+    "firstMetricAt": 1790329726173,
+    "lastMetricAt": 1790329787255,
+    "summaries": {
+      "http.response_time": {
+        "min": 36,
+        "max": 1869,
+        "count": 1745,
+        "mean": 304.1,
+        "p50": 219.2,
+        "median": 219.2,
+        "p75": 361.5,
+        "p90": 713.5,
+        "p95": 871.5,
+        "p99": 1274.3,
+        "p999": 1686.1
+      },
+      "http.response_time.4xx": {
+        "min": 36,
+        "max": 1869,
+        "count": 1745,
+        "mean": 304.1,
+        "p50": 219.2,
+        "median": 219.2,
+        "p75": 361.5,
+        "p90": 713.5,
+        "p95": 871.5,
+        "p99": 1274.3,
+        "p999": 1686.1
+      },
+      "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+        "min": 36,
+        "max": 1869,
+        "count": 1745,
+        "mean": 304.1,
+        "p50": 219.2,
+        "median": 219.2,
+        "p75": 361.5,
+        "p90": 713.5,
+        "p95": 871.5,
+        "p99": 1274.3,
+        "p999": 1686.1
+      },
+      "vusers.session_length": {
+        "min": 222.5,
+        "max": 7751.7,
+        "count": 1745,
+        "mean": 1377.8,
+        "p50": 1085.9,
+        "median": 1085.9,
+        "p75": 1826.6,
+        "p90": 2836.2,
+        "p95": 3262.4,
+        "p99": 3905.8,
+        "p999": 4583.6
+      }
+    },
+    "histograms": {
+      "http.response_time": {
+        "min": 36,
+        "max": 1869,
+        "count": 1745,
+        "mean": 304.1,
+        "p50": 219.2,
+        "median": 219.2,
+        "p75": 361.5,
+        "p90": 713.5,
+        "p95": 871.5,
+        "p99": 1274.3,
+        "p999": 1686.1
+      },
+      "http.response_time.4xx": {
+        "min": 36,
+        "max": 1869,
+        "count": 1745,
+        "mean": 304.1,
+        "p50": 219.2,
+        "median": 219.2,
+        "p75": 361.5,
+        "p90": 713.5,
+        "p95": 871.5,
+        "p99": 1274.3,
+        "p999": 1686.1
+      },
+      "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+        "min": 36,
+        "max": 1869,
+        "count": 1745,
+        "mean": 304.1,
+        "p50": 219.2,
+        "median": 219.2,
+        "p75": 361.5,
+        "p90": 713.5,
+        "p95": 871.5,
+        "p99": 1274.3,
+        "p999": 1686.1
+      },
+      "vusers.session_length": {
+        "min": 222.5,
+        "max": 7751.7,
+        "count": 1745,
+        "mean": 1377.8,
+        "p50": 1085.9,
+        "median": 1085.9,
+        "p75": 1826.6,
+        "p90": 2836.2,
+        "p95": 3262.4,
+        "p99": 3905.8,
+        "p999": 4583.6
+      }
+    }
+  },
+  "intermediate": [
+    {
+      "period": "1790329720000",
+      "counters": {
+        "vusers.created_by_name.Recruiter Job Listings API (Main Intake)": 104,
+        "vusers.created": 104,
+        "http.requests": 104,
+        "vusers.skipped": 79,
+        "http.codes.401": 56,
+        "http.responses": 56,
+        "http.downloaded_bytes": 1456,
+        "plugins.metrics-by-endpoint./prod/Jobs.codes.401": 56,
+        "vusers.failed": 0,
+        "vusers.completed": 56
+      },
+      "rates": {
+        "http.request_rate": 37
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1790329726173,
+      "firstHistogramAt": 1790329727772,
+      "lastCounterAt": 1790329729995,
+      "lastHistogramAt": 1790329729958,
+      "firstMetricAt": 1790329726173,
+      "lastMetricAt": 1790329729995,
+      "summaries": {
+        "http.response_time": {
+          "min": 76,
+          "max": 1056,
+          "count": 56,
+          "mean": 418.4,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 671.9,
+          "p90": 713.5,
+          "p95": 944,
+          "p99": 982.6,
+          "p999": 982.6
+        },
+        "http.response_time.4xx": {
+          "min": 76,
+          "max": 1056,
+          "count": 56,
+          "mean": 418.4,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 671.9,
+          "p90": 713.5,
+          "p95": 944,
+          "p99": 982.6,
+          "p999": 982.6
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 76,
+          "max": 1056,
+          "count": 56,
+          "mean": 418.4,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 671.9,
+          "p90": 713.5,
+          "p95": 944,
+          "p99": 982.6,
+          "p999": 982.6
+        },
+        "vusers.session_length": {
+          "min": 625.4,
+          "max": 2116.2,
+          "count": 56,
+          "mean": 1381.4,
+          "p50": 1380.5,
+          "median": 1380.5,
+          "p75": 1587.9,
+          "p90": 1826.6,
+          "p95": 1863.5,
+          "p99": 2018.7,
+          "p999": 2018.7
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 76,
+          "max": 1056,
+          "count": 56,
+          "mean": 418.4,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 671.9,
+          "p90": 713.5,
+          "p95": 944,
+          "p99": 982.6,
+          "p999": 982.6
+        },
+        "http.response_time.4xx": {
+          "min": 76,
+          "max": 1056,
+          "count": 56,
+          "mean": 418.4,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 671.9,
+          "p90": 713.5,
+          "p95": 944,
+          "p99": 982.6,
+          "p999": 982.6
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 76,
+          "max": 1056,
+          "count": 56,
+          "mean": 418.4,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 671.9,
+          "p90": 713.5,
+          "p95": 944,
+          "p99": 982.6,
+          "p999": 982.6
+        },
+        "vusers.session_length": {
+          "min": 625.4,
+          "max": 2116.2,
+          "count": 56,
+          "mean": 1381.4,
+          "p50": 1380.5,
+          "median": 1380.5,
+          "p75": 1587.9,
+          "p90": 1826.6,
+          "p95": 1863.5,
+          "p99": 2018.7,
+          "p999": 2018.7
+        }
+      }
+    },
+    {
+      "period": "1790329730000",
+      "counters": {
+        "vusers.skipped": 188,
+        "http.codes.401": 317,
+        "http.responses": 317,
+        "http.downloaded_bytes": 8242,
+        "plugins.metrics-by-endpoint./prod/Jobs.codes.401": 317,
+        "vusers.failed": 0,
+        "vusers.completed": 317,
+        "vusers.created_by_name.Recruiter Job Listings API (Main Intake)": 312,
+        "vusers.created": 312,
+        "http.requests": 312
+      },
+      "rates": {
+        "http.request_rate": 37
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1790329730026,
+      "firstHistogramAt": 1790329730184,
+      "lastCounterAt": 1790329739997,
+      "lastHistogramAt": 1790329739949,
+      "firstMetricAt": 1790329730026,
+      "lastMetricAt": 1790329739997,
+      "summaries": {
+        "http.response_time": {
+          "min": 42,
+          "max": 1869,
+          "count": 317,
+          "mean": 298.4,
+          "p50": 172.5,
+          "median": 172.5,
+          "p75": 361.5,
+          "p90": 837.3,
+          "p95": 889.1,
+          "p99": 1130.2,
+          "p999": 1863.5
+        },
+        "http.response_time.4xx": {
+          "min": 42,
+          "max": 1869,
+          "count": 317,
+          "mean": 298.4,
+          "p50": 172.5,
+          "median": 172.5,
+          "p75": 361.5,
+          "p90": 837.3,
+          "p95": 889.1,
+          "p99": 1130.2,
+          "p999": 1863.5
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 42,
+          "max": 1869,
+          "count": 317,
+          "mean": 298.4,
+          "p50": 172.5,
+          "median": 172.5,
+          "p75": 361.5,
+          "p90": 837.3,
+          "p95": 889.1,
+          "p99": 1130.2,
+          "p999": 1863.5
+        },
+        "vusers.session_length": {
+          "min": 268.3,
+          "max": 3813.7,
+          "count": 317,
+          "mean": 1315.6,
+          "p50": 1002.4,
+          "median": 1002.4,
+          "p75": 2186.8,
+          "p90": 2618.1,
+          "p95": 2780,
+          "p99": 3011.6,
+          "p999": 3752.7
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 42,
+          "max": 1869,
+          "count": 317,
+          "mean": 298.4,
+          "p50": 172.5,
+          "median": 172.5,
+          "p75": 361.5,
+          "p90": 837.3,
+          "p95": 889.1,
+          "p99": 1130.2,
+          "p999": 1863.5
+        },
+        "http.response_time.4xx": {
+          "min": 42,
+          "max": 1869,
+          "count": 317,
+          "mean": 298.4,
+          "p50": 172.5,
+          "median": 172.5,
+          "p75": 361.5,
+          "p90": 837.3,
+          "p95": 889.1,
+          "p99": 1130.2,
+          "p999": 1863.5
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 42,
+          "max": 1869,
+          "count": 317,
+          "mean": 298.4,
+          "p50": 172.5,
+          "median": 172.5,
+          "p75": 361.5,
+          "p90": 837.3,
+          "p95": 889.1,
+          "p99": 1130.2,
+          "p999": 1863.5
+        },
+        "vusers.session_length": {
+          "min": 268.3,
+          "max": 3813.7,
+          "count": 317,
+          "mean": 1315.6,
+          "p50": 1002.4,
+          "median": 1002.4,
+          "p75": 2186.8,
+          "p90": 2618.1,
+          "p95": 2780,
+          "p99": 3011.6,
+          "p999": 3752.7
+        }
+      }
+    },
+    {
+      "period": "1790329740000",
+      "counters": {
+        "vusers.created_by_name.Recruiter Job Listings API (Main Intake)": 393,
+        "vusers.created": 393,
+        "http.requests": 393,
+        "vusers.skipped": 107,
+        "http.codes.401": 386,
+        "http.responses": 386,
+        "http.downloaded_bytes": 10036,
+        "plugins.metrics-by-endpoint./prod/Jobs.codes.401": 386,
+        "vusers.failed": 0,
+        "vusers.completed": 386
+      },
+      "rates": {
+        "http.request_rate": 39
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1790329740026,
+      "firstHistogramAt": 1790329740493,
+      "lastCounterAt": 1790329749995,
+      "lastHistogramAt": 1790329749840,
+      "firstMetricAt": 1790329740026,
+      "lastMetricAt": 1790329749995,
+      "summaries": {
+        "http.response_time": {
+          "min": 38,
+          "max": 1224,
+          "count": 386,
+          "mean": 228.8,
+          "p50": 135.7,
+          "median": 135.7,
+          "p75": 228.2,
+          "p90": 572.6,
+          "p95": 804.5,
+          "p99": 820.7,
+          "p999": 982.6
+        },
+        "http.response_time.4xx": {
+          "min": 38,
+          "max": 1224,
+          "count": 386,
+          "mean": 228.8,
+          "p50": 135.7,
+          "median": 135.7,
+          "p75": 228.2,
+          "p90": 572.6,
+          "p95": 804.5,
+          "p99": 820.7,
+          "p999": 982.6
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 38,
+          "max": 1224,
+          "count": 386,
+          "mean": 228.8,
+          "p50": 135.7,
+          "median": 135.7,
+          "p75": 228.2,
+          "p90": 572.6,
+          "p95": 804.5,
+          "p99": 820.7,
+          "p999": 982.6
+        },
+        "vusers.session_length": {
+          "min": 222.5,
+          "max": 2720.5,
+          "count": 386,
+          "mean": 900.8,
+          "p50": 804.5,
+          "median": 804.5,
+          "p75": 1176.4,
+          "p90": 1525.7,
+          "p95": 1826.6,
+          "p99": 2322.1,
+          "p999": 2725
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 38,
+          "max": 1224,
+          "count": 386,
+          "mean": 228.8,
+          "p50": 135.7,
+          "median": 135.7,
+          "p75": 228.2,
+          "p90": 572.6,
+          "p95": 804.5,
+          "p99": 820.7,
+          "p999": 982.6
+        },
+        "http.response_time.4xx": {
+          "min": 38,
+          "max": 1224,
+          "count": 386,
+          "mean": 228.8,
+          "p50": 135.7,
+          "median": 135.7,
+          "p75": 228.2,
+          "p90": 572.6,
+          "p95": 804.5,
+          "p99": 820.7,
+          "p999": 982.6
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 38,
+          "max": 1224,
+          "count": 386,
+          "mean": 228.8,
+          "p50": 135.7,
+          "median": 135.7,
+          "p75": 228.2,
+          "p90": 572.6,
+          "p95": 804.5,
+          "p99": 820.7,
+          "p999": 982.6
+        },
+        "vusers.session_length": {
+          "min": 222.5,
+          "max": 2720.5,
+          "count": 386,
+          "mean": 900.8,
+          "p50": 804.5,
+          "median": 804.5,
+          "p75": 1176.4,
+          "p90": 1525.7,
+          "p95": 1826.6,
+          "p99": 2322.1,
+          "p999": 2725
+        }
+      }
+    },
+    {
+      "period": "1790329750000",
+      "counters": {
+        "vusers.skipped": 272,
+        "http.codes.401": 228,
+        "http.responses": 228,
+        "http.downloaded_bytes": 5928,
+        "plugins.metrics-by-endpoint./prod/Jobs.codes.401": 228,
+        "vusers.failed": 0,
+        "vusers.completed": 228,
+        "vusers.created_by_name.Recruiter Job Listings API (Main Intake)": 228,
+        "vusers.created": 228,
+        "http.requests": 228
+      },
+      "rates": {
+        "http.request_rate": 27
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1790329750026,
+      "firstHistogramAt": 1790329750112,
+      "lastCounterAt": 1790329759995,
+      "lastHistogramAt": 1790329759485,
+      "firstMetricAt": 1790329750026,
+      "lastMetricAt": 1790329759995,
+      "summaries": {
+        "http.response_time": {
+          "min": 43,
+          "max": 1159,
+          "count": 228,
+          "mean": 406.9,
+          "p50": 327.1,
+          "median": 327.1,
+          "p75": 658.6,
+          "p90": 907,
+          "p95": 1002.4,
+          "p99": 1153.1,
+          "p999": 1153.1
+        },
+        "http.response_time.4xx": {
+          "min": 43,
+          "max": 1159,
+          "count": 228,
+          "mean": 406.9,
+          "p50": 327.1,
+          "median": 327.1,
+          "p75": 658.6,
+          "p90": 907,
+          "p95": 1002.4,
+          "p99": 1153.1,
+          "p999": 1153.1
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 43,
+          "max": 1159,
+          "count": 228,
+          "mean": 406.9,
+          "p50": 327.1,
+          "median": 327.1,
+          "p75": 658.6,
+          "p90": 907,
+          "p95": 1002.4,
+          "p99": 1153.1,
+          "p999": 1153.1
+        },
+        "vusers.session_length": {
+          "min": 264.8,
+          "max": 4475.8,
+          "count": 228,
+          "mean": 1854.4,
+          "p50": 1408.4,
+          "median": 1408.4,
+          "p75": 2836.2,
+          "p90": 3464.1,
+          "p95": 3752.7,
+          "p99": 4316.6,
+          "p999": 4403.8
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 43,
+          "max": 1159,
+          "count": 228,
+          "mean": 406.9,
+          "p50": 327.1,
+          "median": 327.1,
+          "p75": 658.6,
+          "p90": 907,
+          "p95": 1002.4,
+          "p99": 1153.1,
+          "p999": 1153.1
+        },
+        "http.response_time.4xx": {
+          "min": 43,
+          "max": 1159,
+          "count": 228,
+          "mean": 406.9,
+          "p50": 327.1,
+          "median": 327.1,
+          "p75": 658.6,
+          "p90": 907,
+          "p95": 1002.4,
+          "p99": 1153.1,
+          "p999": 1153.1
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 43,
+          "max": 1159,
+          "count": 228,
+          "mean": 406.9,
+          "p50": 327.1,
+          "median": 327.1,
+          "p75": 658.6,
+          "p90": 907,
+          "p95": 1002.4,
+          "p99": 1153.1,
+          "p999": 1153.1
+        },
+        "vusers.session_length": {
+          "min": 264.8,
+          "max": 4475.8,
+          "count": 228,
+          "mean": 1854.4,
+          "p50": 1408.4,
+          "median": 1408.4,
+          "p75": 2836.2,
+          "p90": 3464.1,
+          "p95": 3752.7,
+          "p99": 4316.6,
+          "p999": 4403.8
+        }
+      }
+    },
+    {
+      "period": "1790329760000",
+      "counters": {
+        "vusers.skipped": 305,
+        "http.codes.401": 215,
+        "http.responses": 215,
+        "http.downloaded_bytes": 5590,
+        "plugins.metrics-by-endpoint./prod/Jobs.codes.401": 215,
+        "vusers.failed": 0,
+        "vusers.completed": 215,
+        "vusers.created_by_name.Recruiter Job Listings API (Main Intake)": 195,
+        "vusers.created": 195,
+        "http.requests": 195
+      },
+      "rates": {
+        "http.request_rate": 24
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1790329760026,
+      "firstHistogramAt": 1790329760858,
+      "lastCounterAt": 1790329769997,
+      "lastHistogramAt": 1790329769827,
+      "firstMetricAt": 1790329760026,
+      "lastMetricAt": 1790329769997,
+      "summaries": {
+        "http.response_time": {
+          "min": 52,
+          "max": 1683,
+          "count": 215,
+          "mean": 452.8,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 645.6,
+          "p90": 1002.4,
+          "p95": 1465.9,
+          "p99": 1587.9,
+          "p999": 1620
+        },
+        "http.response_time.4xx": {
+          "min": 52,
+          "max": 1683,
+          "count": 215,
+          "mean": 452.8,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 645.6,
+          "p90": 1002.4,
+          "p95": 1465.9,
+          "p99": 1587.9,
+          "p999": 1620
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 52,
+          "max": 1683,
+          "count": 215,
+          "mean": 452.8,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 645.6,
+          "p90": 1002.4,
+          "p95": 1465.9,
+          "p99": 1587.9,
+          "p999": 1620
+        },
+        "vusers.session_length": {
+          "min": 350.7,
+          "max": 7751.7,
+          "count": 215,
+          "mean": 2216.7,
+          "p50": 2231,
+          "median": 2231,
+          "p75": 3011.6,
+          "p90": 3464.1,
+          "p95": 3752.7,
+          "p99": 4492.8,
+          "p999": 4583.6
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 52,
+          "max": 1683,
+          "count": 215,
+          "mean": 452.8,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 645.6,
+          "p90": 1002.4,
+          "p95": 1465.9,
+          "p99": 1587.9,
+          "p999": 1620
+        },
+        "http.response_time.4xx": {
+          "min": 52,
+          "max": 1683,
+          "count": 215,
+          "mean": 452.8,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 645.6,
+          "p90": 1002.4,
+          "p95": 1465.9,
+          "p99": 1587.9,
+          "p999": 1620
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 52,
+          "max": 1683,
+          "count": 215,
+          "mean": 452.8,
+          "p50": 320.6,
+          "median": 320.6,
+          "p75": 645.6,
+          "p90": 1002.4,
+          "p95": 1465.9,
+          "p99": 1587.9,
+          "p999": 1620
+        },
+        "vusers.session_length": {
+          "min": 350.7,
+          "max": 7751.7,
+          "count": 215,
+          "mean": 2216.7,
+          "p50": 2231,
+          "median": 2231,
+          "p75": 3011.6,
+          "p90": 3464.1,
+          "p95": 3752.7,
+          "p99": 4492.8,
+          "p999": 4583.6
+        }
+      }
+    },
+    {
+      "period": "1790329770000",
+      "counters": {
+        "vusers.created_by_name.Recruiter Job Listings API (Main Intake)": 336,
+        "vusers.created": 336,
+        "http.requests": 336,
+        "http.codes.401": 316,
+        "http.responses": 316,
+        "http.downloaded_bytes": 8216,
+        "plugins.metrics-by-endpoint./prod/Jobs.codes.401": 316,
+        "vusers.failed": 0,
+        "vusers.completed": 316,
+        "vusers.skipped": 164
+      },
+      "rates": {
+        "http.request_rate": 39
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1790329770014,
+      "firstHistogramAt": 1790329770014,
+      "lastCounterAt": 1790329779995,
+      "lastHistogramAt": 1790329778917,
+      "firstMetricAt": 1790329770014,
+      "lastMetricAt": 1790329779995,
+      "summaries": {
+        "http.response_time": {
+          "min": 36,
+          "max": 1010,
+          "count": 316,
+          "mean": 267.7,
+          "p50": 228.2,
+          "median": 228.2,
+          "p75": 354.3,
+          "p90": 450.4,
+          "p95": 742.6,
+          "p99": 837.3,
+          "p999": 837.3
+        },
+        "http.response_time.4xx": {
+          "min": 36,
+          "max": 1010,
+          "count": 316,
+          "mean": 267.7,
+          "p50": 228.2,
+          "median": 228.2,
+          "p75": 354.3,
+          "p90": 450.4,
+          "p95": 742.6,
+          "p99": 837.3,
+          "p999": 837.3
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 36,
+          "max": 1010,
+          "count": 316,
+          "mean": 267.7,
+          "p50": 228.2,
+          "median": 228.2,
+          "p75": 354.3,
+          "p90": 450.4,
+          "p95": 742.6,
+          "p99": 837.3,
+          "p999": 837.3
+        },
+        "vusers.session_length": {
+          "min": 340.3,
+          "max": 2973.8,
+          "count": 316,
+          "mean": 1069.6,
+          "p50": 963.1,
+          "median": 963.1,
+          "p75": 1326.4,
+          "p90": 1686.1,
+          "p95": 2276.1,
+          "p99": 2566.3,
+          "p999": 2951.9
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 36,
+          "max": 1010,
+          "count": 316,
+          "mean": 267.7,
+          "p50": 228.2,
+          "median": 228.2,
+          "p75": 354.3,
+          "p90": 450.4,
+          "p95": 742.6,
+          "p99": 837.3,
+          "p999": 837.3
+        },
+        "http.response_time.4xx": {
+          "min": 36,
+          "max": 1010,
+          "count": 316,
+          "mean": 267.7,
+          "p50": 228.2,
+          "median": 228.2,
+          "p75": 354.3,
+          "p90": 450.4,
+          "p95": 742.6,
+          "p99": 837.3,
+          "p999": 837.3
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 36,
+          "max": 1010,
+          "count": 316,
+          "mean": 267.7,
+          "p50": 228.2,
+          "median": 228.2,
+          "p75": 354.3,
+          "p90": 450.4,
+          "p95": 742.6,
+          "p99": 837.3,
+          "p999": 837.3
+        },
+        "vusers.session_length": {
+          "min": 340.3,
+          "max": 2973.8,
+          "count": 316,
+          "mean": 1069.6,
+          "p50": 963.1,
+          "median": 963.1,
+          "p75": 1326.4,
+          "p90": 1686.1,
+          "p95": 2276.1,
+          "p99": 2566.3,
+          "p999": 2951.9
+        }
+      }
+    },
+    {
+      "period": "1790329780000",
+      "counters": {
+        "vusers.skipped": 140,
+        "http.codes.401": 227,
+        "http.responses": 227,
+        "http.downloaded_bytes": 5902,
+        "plugins.metrics-by-endpoint./prod/Jobs.codes.401": 227,
+        "vusers.failed": 0,
+        "vusers.completed": 227,
+        "vusers.created_by_name.Recruiter Job Listings API (Main Intake)": 177,
+        "vusers.created": 177,
+        "http.requests": 177
+      },
+      "rates": {
+        "http.request_rate": 43
+      },
+      "http.request_rate": null,
+      "firstCounterAt": 1790329780026,
+      "firstHistogramAt": 1790329781912,
+      "lastCounterAt": 1790329787255,
+      "lastHistogramAt": 1790329787255,
+      "firstMetricAt": 1790329780026,
+      "lastMetricAt": 1790329787255,
+      "summaries": {
+        "http.response_time": {
+          "min": 43,
+          "max": 443,
+          "count": 227,
+          "mean": 218.5,
+          "p50": 257.3,
+          "median": 257.3,
+          "p75": 290.1,
+          "p90": 327.1,
+          "p95": 354.3,
+          "p99": 399.5,
+          "p999": 399.5
+        },
+        "http.response_time.4xx": {
+          "min": 43,
+          "max": 443,
+          "count": 227,
+          "mean": 218.5,
+          "p50": 257.3,
+          "median": 257.3,
+          "p75": 290.1,
+          "p90": 327.1,
+          "p95": 354.3,
+          "p99": 399.5,
+          "p999": 399.5
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 43,
+          "max": 443,
+          "count": 227,
+          "mean": 218.5,
+          "p50": 257.3,
+          "median": 257.3,
+          "p75": 290.1,
+          "p90": 327.1,
+          "p95": 354.3,
+          "p99": 399.5,
+          "p999": 399.5
+        },
+        "vusers.session_length": {
+          "min": 229,
+          "max": 4858.3,
+          "count": 227,
+          "mean": 1430.4,
+          "p50": 1002.4,
+          "median": 1002.4,
+          "p75": 2059.5,
+          "p90": 3072.4,
+          "p95": 3464.1,
+          "p99": 3678.4,
+          "p999": 3752.7
+        }
+      },
+      "histograms": {
+        "http.response_time": {
+          "min": 43,
+          "max": 443,
+          "count": 227,
+          "mean": 218.5,
+          "p50": 257.3,
+          "median": 257.3,
+          "p75": 290.1,
+          "p90": 327.1,
+          "p95": 354.3,
+          "p99": 399.5,
+          "p999": 399.5
+        },
+        "http.response_time.4xx": {
+          "min": 43,
+          "max": 443,
+          "count": 227,
+          "mean": 218.5,
+          "p50": 257.3,
+          "median": 257.3,
+          "p75": 290.1,
+          "p90": 327.1,
+          "p95": 354.3,
+          "p99": 399.5,
+          "p999": 399.5
+        },
+        "plugins.metrics-by-endpoint.response_time./prod/Jobs": {
+          "min": 43,
+          "max": 443,
+          "count": 227,
+          "mean": 218.5,
+          "p50": 257.3,
+          "median": 257.3,
+          "p75": 290.1,
+          "p90": 327.1,
+          "p95": 354.3,
+          "p99": 399.5,
+          "p999": 399.5
+        },
+        "vusers.session_length": {
+          "min": 229,
+          "max": 4858.3,
+          "count": 227,
+          "mean": 1430.4,
+          "p50": 1002.4,
+          "median": 1002.4,
+          "p75": 2059.5,
+          "p90": 3072.4,
+          "p95": 3464.1,
+          "p99": 3678.4,
+          "p999": 3752.7
+        }
+      }
+    }
+  ]
+}

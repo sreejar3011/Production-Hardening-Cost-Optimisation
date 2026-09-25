@@ -1,0 +1,30 @@
+# Artillery Load Test Configuration: Project 2 (Smart Leave & Absence Management)
+#
+# Status: UNAVAILABLE
+# Note: AWS API Gateway resources for Project 2 are not deployed or documented in the repository.
+# This configuration is provided for architectural completeness and future redeployment validation.
+#
+# Target API URL must be supplied via the PROJECT2_API_URL environment variable.
+
+config:
+  target: "{{ $processEnvironment.PROJECT2_API_URL }}"
+  phases:
+    - duration: 60
+      arrivalRate: 50
+      name: "Sustained Concurrency Phase (50 concurrent VUs/sec for 60s)"
+  defaults:
+    headers:
+      Content-Type: "application/json"
+      Accept: "application/json"
+
+scenarios:
+  - name: "Leave Request Submission API"
+    flow:
+      - post:
+          url: "/leaves"
+          json:
+            employee_id: "EMP-TEST-002"
+            leave_type: "ANNUAL"
+            start_date: "2026-10-01"
+            end_date: "2026-10-05"
+            reason: "Performance load testing synthetic payload"

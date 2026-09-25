@@ -1,0 +1,23 @@
+# Artillery Load Test Configuration: Project 3 (Employee Learning & Skill Certificate Tracker)
+#
+# Status: UNAVAILABLE
+# Note: AWS API Gateway resources for Project 3 are not deployed or documented in the repository.
+# This configuration is provided for architectural completeness and future redeployment validation.
+#
+# Target API URL must be supplied via the PROJECT3_API_URL environment variable.
+
+config:
+  target: "{{ $processEnvironment.PROJECT3_API_URL }}"
+  phases:
+    - duration: 60
+      arrivalRate: 50
+      name: "Sustained Concurrency Phase (50 concurrent VUs/sec for 60s)"
+  defaults:
+    headers:
+      Accept: "application/json"
+
+scenarios:
+  - name: "Certificate Fetch API"
+    flow:
+      - get:
+          url: "/certificates?employee_id=EMP-TEST-003&course_id=AWS-PROD-001"
